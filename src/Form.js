@@ -44,6 +44,14 @@ const Form = () => {
     return errs;
   };
 
+  const handleDisable = () => {
+    const formCheck = document.getElementById("form__check");
+    const btn = document.getElementById("btn__submit");
+    formCheck.checked
+      ? btn.removeAttribute("disabled")
+      : (btn.disabled = "true");
+  };
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
@@ -109,12 +117,17 @@ const Form = () => {
           <p className="error-text">{errors.message}</p>
         </div>
         <div className="checkbox-input">
-          <input type="checkbox" id="form-check" required />
+          <input
+            type="checkbox"
+            id="form__check"
+            onClick={handleDisable}
+            required
+          />
           <label>
             You agree to providing your data to Nonso who may contact you
           </label>
         </div>
-        <button className="btn" id="btn__submit" type="submit">
+        <button className="btn" id="btn__submit" type="submit" disabled>
           Send message
         </button>
       </form>

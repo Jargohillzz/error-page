@@ -35,7 +35,7 @@
   padding: 1.2rem 0;
   margin-bottom: 20px;
   text-decoration: none;
-  background-color: rgba(51, 51, 51, 0.2);
+  background-color: #eaecf0;
   color: #333;
   font-size: 1.5rem;
   letter-spacing: 2px;
@@ -113,6 +113,47 @@ textarea {
   border: none;
   border-radius: 8px;
   text-transform: capitalize;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #d1e9ff;
+}
+
+.btn:disabled {
+  background-color: #b2ddff;
+  cursor: default;
+}
+
+.btn:disabled:hover {
+  box-shadow: none;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type="checkbox"]:after {
+  font-weight: normal;
+  content: "\2714";
+  font-size: 16px;
+  color: white;
+}
+input[type="checkbox"]:hover {
+  box-shadow: 0px 0px 0px 4px #d1e9ff;
+}
+input[type="checkbox"]:checked {
+  border: 1px solid #1570ef;
+}
+input[type="checkbox"]:checked:after {
+  color: #1570ef;
 }
 
 @media screen and (min-width: 768px) {
@@ -154,4 +195,8 @@ textarea {
 .error-text {
   font-size: 14px;
   color: #f83f23;
+}
+
+input:focus ~ .error-text {
+  display: none;
 }
