@@ -124,7 +124,8 @@ const Form = () => {
             required
           />
           <label>
-            You agree to providing your data to Nonso who may contact you
+            You agree to providing your data to Ugwu Chukwunonso who may contact
+            you
           </label>
         </div>
         <button className="btn" id="btn__submit" type="submit" disabled>
