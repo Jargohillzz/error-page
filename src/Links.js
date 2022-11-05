@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Links = () => {
   return (
     <div className="links">
@@ -32,6 +34,9 @@ const Links = () => {
       >
         design books
       </a>
+      <Link to="/contact" id="contact">
+        contact me
+      </Link>
     </div>
   );
 };
